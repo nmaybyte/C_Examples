@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std; 
+
+int main(){
+	
+	//Variable section
+	int num = 0;  //Variable used to gather a number from the user
+	int remainder = 0;  //Variable to store the remainder in
+	
+	printf("Please give me a number: ");
+	cin>>num; 
+	remainder = num%2; 
+	
+	//Troubleshooting purposes
+	cout<<"Remainder is: "<<remainder<<endl;
+	
+	switch(remainder){
+		//Remainder = 0 then the user generated number is even
+		case 0:
+			printf("Number is even!");
+			break; 
+		//Remainder = 1, then the user generated number is odd
+		case 1:
+			printf("Number is odd!");
+			break;
+			
+		//Because this is a binary situation (read THIS BUT NOT THAT) we don't have to create a default 
+		//   option, but it's just good practice to do so. 
+		default:
+			printf("Something has gone wrong. See error code for details.");
+			
+	}
+}
